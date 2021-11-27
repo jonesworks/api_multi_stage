@@ -1,0 +1,4 @@
+FROM apifirst AS build1
+
+# install packages
+RUN R -e 'install.packages(c("parsnip", "workflows", "recipes", "baguette", "readr"))'

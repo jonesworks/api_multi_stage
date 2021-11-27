@@ -1,0 +1,8 @@
+FROM trestletech/plumber AS builder
+
+# copy model and scoring script
+RUN mkdir /app
+COPY crash-wf-model.rds /app
+COPY crash-model-metrics.csv /app
+COPY plumber.R /app
+WORKDIR /app
